@@ -25,6 +25,8 @@ def main():
     client.loop_start()             # start the loop
     print("Subscribing to topic", "RoboFIFA/safety")
     client.subscribe("RoboFIFA/safety")
+    print("Subscribing to topic", "RoboFIFA/valid_game_state")
+    client.subscribe("RoboFIFA/valid_game_state")
     try:
         while True:
             while received_messages.robots:
